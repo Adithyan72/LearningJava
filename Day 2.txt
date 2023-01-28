@@ -1,0 +1,303 @@
+//consider Data Structure and Algorithm and its approch as DSA
+//consider Soution Program as Code
+
+Question
+1) Take input of the age of 3 people A, B, C and determine oldest amongst them and print his name.
+
+DSA
+Step 1. Start 
+Step 2. Declare Variable names A,B and C with 'int data type'.
+Step 3. Take Values of A,B,C from the user using Scanner.
+Step 4. if(A is greater than B)//inside if condition
+     Step 4.1 if(A is greater than C)
+     Step 4.2 then,Print/Display “A”.
+     Step 4.3 else Print/Display “C”.
+Step 5. else if(B is greater than A)
+     Step 5.1 if(B is greater than C)
+     Step 5.2 then,Print/Display “B”.
+     Step 5.3 else Print/Display “C”.
+Step 6. else if(C is greater than A)
+     Step 6.1 if(C is greater than B)
+     Step 6.2 then,Print/Display “C”.
+     Step 6.3 else Print/Display “B”.
+Step 7. Stop
+
+Code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int A=sc.nextInt(),B=sc.nextInt(),C=sc.nextInt();
+        if(A>B){
+            if(A>C){
+               System.out.println("A"); 
+            }
+            else{
+                System.out.println("C");
+            }
+        }
+        else{
+            if(B>C){
+               System.out.println("B"); 
+            }
+            else{
+                System.out.println("C");
+            }
+        }
+    }
+}
+
+2) Take the age and salary of a person as an integer input,
+   If the age is above 40 then
+   a. If the salary is greater than or equal to 30,000 then print “You are rich and adult”
+   b. Else print “You are an adult” 
+   Else if salary is less than or equal to 40
+   a. If the salary is greater than or equal to 12,000, then print “You are rich and young”
+   b.Else print “You are young”
+
+DSA
+Step 1. Start 
+Step 2. Declare Variable names Age and Salary with 'int data type'.
+Step 3. Take Values of Age and Salary from the user using Scanner.
+Step 4. if(Age is greater than 40)//inside if condition
+     Step 4.1 if(Salary is greater than or equal to 30000)
+     Step 4.2 then,Print/Display “You are rich and adult”.
+     Step 4.3 else Print/Display “You are adult”.
+Step 5. else if(Age is less than or equal to 40)
+     Step 5.1 if(Salary is greater than or equal to 12000)
+     Step 5.2 then,Print/Display “You are rich and young”.
+     Step 5.3 else Print/Display “young”.
+Step 6. Stop
+
+Code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int age=sc.nextInt(),salary=sc.nextInt();
+        if(age>40)
+            if(salary>=30000){
+                System.out.println("You are rich and adult");
+            }else{
+                System.out.println("You are an adult");
+            }
+        else if(age<=40)
+            if(salary>=12000){
+                System.out.println("You are rich and young");
+            }else{
+                System.out.println("You are young");
+            }
+    }
+}
+
+3) Take input three numbers x, y, z
+   Then if the value of x is greater than or equal to 20,
+   a. If the value of y is greater than or equal to 100 then add 100 to the value of z.
+   b. If the value of y is less than 100 and greater than or equal to 50, then add 50 to the value of z.
+   c. Else add 10 to the value of z.
+   Else if the value of x is less than 20, 
+   a. If the value of y is greater than or equal to 100 then add 3 to the value of z.
+   b. If the value of y is less than 100 and greater than or equal to 50, then add 2 to the value of z.
+   c. Else add 1 to the value of z.
+   Print the value of z in the end.
+
+DSA
+Step 1. Start 
+Step 2. Declare Variable names x,y and z with 'int data type'.
+Step 3. Take Values of x,y,z from the user using Scanner.
+Step 4. if(x is greater than or equal to 20)//inside if condition
+     Step 4.1 if(y is greater than or equal to 100) z+=100;
+     Step 4.2 else if(y is less than and greater than or equal to 50) z+=50;
+     Step 4.3 else z+=10.
+Step 5. else if(x is less than 20)
+     Step 5.1 if(y is greater than or equal to 100) z+=3.
+     Step 5.2 else if(y is less than and greater than or equal to 50) z+=2.
+     Step 5.3 else z+=1.
+Step 6. Print/Display z.
+Step 7. Stop
+
+Code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt(), y=sc.nextInt(), z=sc.nextInt();
+        if(x>=20){
+           if(y>=100){
+               z+=100;
+           }else if(y<100 && y>=50){
+               z+=50;
+           }else{
+                z+=10;
+            }
+        }else if(x<20){
+            if(y>=100){
+               z+=3;
+           }else if(y<100 && y>=50){
+               z+=2;
+           }else{
+                z+=1;
+            }
+        }
+        System.out.println(z);
+    }
+}
+
+4) Take in two inputs x and y from the user, and then
+   a. If the value of x is greater than or equal to 59 and y is greater than or equal to 10, then print 
+      “X is greater than or equal to 59 and y is greater than or equal to 10”
+   b. If the value of x is greater than or equal to 50, and y is less than 10, then print
+      “X is greater than or equal to 50 and y is less than 10”
+   Else print “None of the condition matches”
+
+DSA
+Step 1. Start 
+Step 2. Declare Variable names x,y with 'int data type'.
+Step 3. Take Values of x,y from the user using Scanner.
+Step 4. if(x is greater than or equal to 59 and y is greater than or equal to 10)//inside if condition
+     Step 4.1 Print/Display “X is greater than or equal to 59 and Y is greater than or equal to 10”
+Step 5. else if(x is greater than or equal to 50 and y is less than 10)
+     Step 5.1 Print/Display “X is greater than or equal to 50 and Y is less than 10”
+Step 6. else Print/Display “None of the condition matches”.
+Step 7. Stop
+
+Code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt(),y=sc.nextInt();
+        if(x>=59 && y>=10)
+            System.out.println("X is greater than or equal to 59 and y is greater than or equal to 10");
+        else if(x>=50 && y<10)
+            System.out.println("X is greater than or equal to 50 and y is less than 10");
+        else
+            System.out.println("None of the condition matches");
+    }
+}
+
+5) Take in three inputs age, salary, experience, then
+   a. If age is greater than 60 and salary is greater than 20,000 and experience is greater than 20 years, then add 5000 to the salary.
+   b. If age is greater than 40 and salary is greater than 15,000 and experience is greater than 10 years, then add 2000 to the salary.
+   c. If age is greater than 30 and salary is greater than 10,000 and experience is greater than 5 years, then add 1000 to the salary.
+   Otherwise add 500 to the salary.
+   In the end Print the final salary.
+
+DSA
+Step 1. Start 
+Step 2. Declare Variable names age,salary and experience with 'int data type'.
+Step 3. Take Values of age,salary,experience from the user using Scanner.
+Step 4. if(age is greater than 60 and salary is greater than 20,000 and experience is greater than 20 years)
+Step 5. then,salary+=5000.
+Step 6. else if(age is greater than 40 and salary is greater than 15,000 and experience is greater than 10 years)
+Step 7. then,salary+=2000.
+Step 8. else if(age is greater than 30 and salary is greater than 10,000 and experience is greater than 5 years)
+Step 9. then,salary+=1000.
+Step 10. else salary+=500
+Step 11. Print/Display salary.
+Step 12. Stop
+
+Code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int age=sc.nextInt(), salary=sc.nextInt(), exp=sc.nextInt();
+        if(age>60 && salary>20000 && exp>20)
+            salary+=5000;
+        else if(age>40 && salary>15000 && exp>10)
+            salary+=2000;
+        else if(age>30 && salary>10000 && exp > 5)
+            salary+=1000;
+        else
+            salary+=500;
+        System.out.print(salary);
+    }
+}
+
+6) Take in experience, salary and rank as integer inputs, then 
+	If experience is greater than or equal to 10 years or the salary is greater than or equal to 50,000 or rank is greater than or equal to 10,
+	 then print “You are in top management”
+	Else print “You are not in top management”
+
+DSA
+Step 1. Start 
+Step 2. Declare Variable names experience,salary,rank with 'int data type'.
+Step 3. Take Values of experience,salary,rank from the user using Scanner.
+Step 4. if(experience is greater than or equal to 10 years or the salary is greater than or equal to 50,000 or rank is greater than or equal to 10)//inside if condition
+     Step 4.1 Print/Display “You are in top management”
+Step 5. else Print/Display “You are not in top management”.
+Step 6. Stop
+
+Code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int rank=sc.nextInt(), salary=sc.nextInt(), exp=sc.nextInt();
+        if(exp>=10 || salary>=50000 || rank>=10)
+            System.out.println("You are in top management");
+        else
+            System.out.println("You are not in top management");
+    }
+}
+
+7) Take in x, y, z as integer inputs from the user,
+   a. If x is greater than or equal to 20 and z is less than 100 then add 200 to the value of z.
+   b. If x is greater than or equal to 10, or y is less than 50 
+   Then add 100 to the value of z.
+   Print the final value of z in the end.
+
+DSA
+Step 1. Start
+Step 2. Declare Variable names x,y,z with 'int data type'.
+Step 3. Take Values of x,y,z from the user using Scanner.
+Step 4. if(x is greater than or equal to 20 and y is less than 100)//inside if condition
+     Step 4.1 z+=200
+Step 5. else if(x is greater than or equal to 10 or y is less than 50)
+     Step 5.1 z+=100
+Step 6. Print/Display z.
+Step 7. Stop
+
+Code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt(), y=sc.nextInt(), z=sc.nextInt();
+        if(x>=20 && z<100)
+            z+=200;
+        else if(x>=10 || y<50)
+            z+=100;
+        System.out.println(z);
+    }
+}
+
